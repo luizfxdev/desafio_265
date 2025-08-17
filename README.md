@@ -36,19 +36,22 @@ function findPortalSequence(numbers) {
     const sorted = [...numbers].sort((a, b) => a - b);
     let maxSequence = [];
 
-    function buildSequence(start, current) {
-        if (current.length > maxSequence.length) maxSequence = [...current];
-        for (let i = start; i < sorted.length; i++) {
-            const num = sorted[i];
-            if (current.length === 0 || num >= 2 * current[current.length - 1] + 1) {
-                buildSequence(i + 1, [...current, num]);
-            }
-        }
-    }
+    // Função principal para encontrar a maior sequência válida de portais
+function findPortalSequence(numbers) {
+  if (numbers.length === 0) return { sequence: [], steps: '' };
 
-    buildSequence(0, []);
-    return maxSequence;
-}
+  // Remove duplicatas e ordena os números em ordem crescente
+  const sorted = [...new Set(numbers)].sort((a, b) => a - b);
+  let maxSequence = [];
+  let calculationSteps = '';
+
+  calculationSteps += `🎯 Números ordenados: [${sorted.join(', ')}]\n\n`;
+
+  // Função para verificar se um número pode seguir outro na sequência
+  function canFollow(current, previous) {
+    return current > previous;
+  }
+
 🎨 Design & Tecnologias
 ✨ Estilo Visual
 Tema: Fantasia medieval com efeitos de brilho (glow).
