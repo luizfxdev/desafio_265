@@ -28,29 +28,7 @@ RETORNAR → Limpa os campos.
 
 Resultado: Exibe a sequência encontrada e o passo a passo do cálculo.
 
-2️⃣ Algoritmo (JavaScript)
-A função principal findPortalSequence() usa backtracking para testar combinações válidas:
 
-javascript
-function findPortalSequence(numbers) {
-    const sorted = [...numbers].sort((a, b) => a - b);
-    let maxSequence = [];
-
-    // Função principal para encontrar a maior sequência válida de portais
-function findPortalSequence(numbers) {
-  if (numbers.length === 0) return { sequence: [], steps: '' };
-
-  // Remove duplicatas e ordena os números em ordem crescente
-  const sorted = [...new Set(numbers)].sort((a, b) => a - b);
-  let maxSequence = [];
-  let calculationSteps = '';
-
-  calculationSteps += `🎯 Números ordenados: [${sorted.join(', ')}]\n\n`;
-
-  // Função para verificar se um número pode seguir outro na sequência
-  function canFollow(current, previous) {
-    return current > previous;
-  }
 
 🎨 Design & Tecnologias
 ✨ Estilo Visual
