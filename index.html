@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Jornada do Herói: O Enigma dos Portais</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>O Enigma dos Portais</h1>
+      <p class="description">
+        Bem-vindo aventureiro! Ajude o herói Aldor a encontrar o caminho certo através dos portais mágicos.
+      </p>
+
+      <div class="input-group">
+        <label for="portals">Números dos Portais (separados por vírgula):</label>
+        <input type="text" id="portals" placeholder="Ex: 2, 3, 4, 7, 14, 30" />
+      </div>
+
+      <div class="button-group">
+        <button class="glow-on-hover" id="solve-btn" type="button">DESVENDAR</button>
+        <button class="glow-on-hover" id="reset-btn" type="button">RETORNAR</button>
+      </div>
+
+      <div class="result-container">
+        <h2>Resultado:</h2>
+        <div id="result"></div>
+        <div id="calculation"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
